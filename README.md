@@ -23,7 +23,7 @@ disable_overscan=1
 ```
 
 
-Next copy the following to the derectory. These configs set a resolution of 720 x 480 and throw out half of the lines during emulation, effectively giving a 240p resoluton.  
+Next copy the following configs over. These set a resolution of 720 x 480 and, during emulation, throw out half of the lines. This effectively gives a 240p resoluton.  
 - **retroarch.cfg**
 - **runcommand-onend.sh**
 - **runcommand-onstart.sh**
@@ -38,7 +38,7 @@ Copy over **pi_iq_horz_nearest_vert.glslp** to the following directory:
 /opt/retropie/configs/all/retroarch/shaders/
 ```
 
-Lasty copy over:
+Lastly copy over:
 
 - **pi_iq_horz_nearest_vert.glsl**
 - **pi_iq_horz_nearest_vert_GBA.glsl** 
