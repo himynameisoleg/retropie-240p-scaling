@@ -23,7 +23,7 @@ disable_overscan=1
 ```
 
 
-Next copy the following to the derectory: 
+Next copy the following to the derectory. These configs set a resolution of 720 x 480 and throw out half of the lines during emulation, effectively giving a 240p resoluton.  
 - **retroarch.cfg**
 - **runcommand-onend.sh**
 - **runcommand-onstart.sh**
@@ -32,7 +32,7 @@ Next copy the following to the derectory:
 /opt/retropie/configs/all/
 ```
 
-Copy over **pi_iq_horz_nearest_vert.glslp** to:
+Copy over **pi_iq_horz_nearest_vert.glslp** to the following directory:
 
 ```
 /opt/retropie/configs/all/retroarch/shaders/
@@ -54,12 +54,14 @@ Restart your Pi and continue to the next section.
 
 1. Load a ROM
 2. Press SELECT + X to open the RetroArch menu
-3. Go to Settings > Video
-4. Set height to 480 (if its not already set by default)
-5. Set width to 660
+3. Go to Quick Menu > Save Core Overrides (make sure our settings get saved)
+4. Go to Settings > Video
+5. Set Aspect Ratio to Custom
+6. Set height to 480 (if its not already set by default)
+7. Set width to 660
 
-660 x 480 seems to work best on my Sony PVM 1343MD with the SNES and Master System cores but feel free to play around with the width value until yours looks right. Some cores may be [448 | 480] x [660 - 700] so feel free to adjust on a per system/core basis.
+660 x 480 seems to work best on my Sony PVM 1343MD with the SNES and Master System cores. Some cores may be [448 | 480] x [660 - 700] so feel free to adjust on a per system/core basis until yours looks right. 
 
-When you load into a ROM the grey menu screen will appear noticably worse and and letters will become virtually unredable. The letterboxing should be gonee now and the scaling in games will look much better and more true to the original CRT composite aesthetic. 
+You may have noticed that after loading into a ROM the grey menu screen will appear noticably worse and menu text has become virtually unredable. This is evidence that things are working! Additionally the black letterboxing should be gone and the scaling in games will look much more true to the original and fit the entire height of your CRT.
 
 Happy Tinkering! 
