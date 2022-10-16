@@ -1,19 +1,23 @@
 # RetroPie 240p Scaling Settings for Composite Output
-The following consolidated guide and source files based on [this](https://retropie.org.uk/forum/topic/11628/240p-and-mame-scaling/11) post. 
+The following is a consolidated guide with source files based on [this](https://retropie.org.uk/forum/topic/11628/240p-and-mame-scaling/11) post. 
 
-We are able to get better quality 240p signal scaling out of the built in composite output in most Raspberry Pi models. Pi 2 and 3 have a 3.5mm jack and even the Pi Zero has "TV" pins you can solder an RCA cable to. 
+We can get improved 240p scaling out of the built in composite analog output in most Raspberry Pi models. Pi 2 and 3 have a 3.5mm jack and even the Pi Zero has "TV" pins you can solder an RCA cable to. With a few configuration changes we can get native 240p composite output during emulation.
 
-This guide assumes you have RetroPie installed with WiFi and SSH enabled. 
+This guide assumes you have RetroPie installed, connected to a Wifi network and have SSH enabled. 
 
 ## Transfering Files
-The fastest way to transfer files over SSH is using FileZilla, although there are plenty of other clients that will do the trick. We will need to transfer (and overwrite) several files.
+A quick way to transfer files wirelessly over SSH is using FileZilla. There are plenty of other clients that will do the trick as well so use your favorite. We will need to transfer (and overwrite) several files and configurations that will enable 240p during emulation and higher resolutions for menu legibility. 
+
+## Updating Raspberry Pi Configs
+
+Download the files from this repo and connect to your Pi using FileZilla. Once connected we will need to transfer these files to the appropriate directory.
 
 Firstly replace **config.txt** with the one provided, found in:
 ```
 /boot/config.txt
 ```
 
-If you do not want to overwrite your config file then simply update:
+If you do not want to overwrite your config.txt file then simply update:
 ```
 disable_overscan=1
 ```
@@ -42,6 +46,9 @@ Lasty copy over:
 ```
 /opt/retropie/configs/all/retroarch/shaders/shaders/
 ```
+
+Restart your Pi and continue to the next section.
+
 
 ## Adjusting Custom Aspect Ratio
 
